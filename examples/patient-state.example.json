@@ -1,0 +1,141 @@
+{
+  "patientId": "demo-patient-001",
+  "careContext": {
+    "setting": "outpatient",
+    "primaryConcern": "low back pain with lifting intolerance"
+  },
+  "axes": {
+    "condition": {
+      "summary": "Mechanical low back pain presentation without current red flag pattern",
+      "trend": "stable",
+      "observations": [
+        {
+          "code": {
+            "system": "internal",
+            "code": "condition_frame",
+            "display": "working clinical frame"
+          },
+          "value": "mechanical low back pain",
+          "sourceType": "clinician_assessment",
+          "observedAt": "2026-03-19T09:00:00Z",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "impairment": {
+      "summary": "Pain with flexion and reduced trunk endurance",
+      "trend": "improving",
+      "observations": [
+        {
+          "code": {
+            "system": "internal",
+            "code": "pain_nrs",
+            "display": "pain numeric rating scale"
+          },
+          "value": 4,
+          "unit": "/10",
+          "sourceType": "patient_report",
+          "observedAt": "2026-03-19T09:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "code": {
+            "system": "internal",
+            "code": "trunk_endurance",
+            "display": "trunk endurance limitation"
+          },
+          "value": "reduced",
+          "sourceType": "physical_exam",
+          "observedAt": "2026-03-19T09:05:00Z",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "function": {
+      "summary": "Can walk normally but has difficulty lifting from the floor",
+      "trend": "improving",
+      "observations": [
+        {
+          "code": {
+            "system": "internal",
+            "code": "activity_limit",
+            "display": "activity limitation"
+          },
+          "value": "difficulty lifting objects over 10 kg from floor level",
+          "sourceType": "patient_report",
+          "observedAt": "2026-03-19T09:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    "participation": {
+      "summary": "Work capacity is partially limited during warehouse tasks",
+      "trend": "stable",
+      "observations": [
+        {
+          "code": {
+            "system": "internal",
+            "code": "work_role_impact",
+            "display": "work role impact"
+          },
+          "value": "modified duties required",
+          "sourceType": "patient_report",
+          "observedAt": "2026-03-19T09:00:00Z",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "risk": {
+      "summary": "Low immediate medical risk, moderate risk of delayed recovery due to fear of bending",
+      "trend": "stable",
+      "observations": [
+        {
+          "code": {
+            "system": "internal",
+            "code": "fear_avoidance",
+            "display": "fear avoidance behavior"
+          },
+          "value": true,
+          "sourceType": "clinician_assessment",
+          "observedAt": "2026-03-19T09:10:00Z",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "trajectory": {
+      "summary": "Symptoms are trending in the right direction over the last two weeks",
+      "trend": "improving",
+      "observations": [
+        {
+          "code": {
+            "system": "internal",
+            "code": "response_to_care",
+            "display": "response to care"
+          },
+          "value": "positive early response",
+          "sourceType": "clinician_assessment",
+          "observedAt": "2026-03-19T09:10:00Z",
+          "confidence": "medium"
+        }
+      ]
+    }
+  },
+  "riskSignals": [
+    {
+      "name": "fear avoidance",
+      "severity": "moderate",
+      "rationale": "Avoids bending and lifting despite improving pain."
+    }
+  ],
+  "trajectory": {
+    "phase": "subacute",
+    "responseToCare": "improving",
+    "expectedNextReviewDays": 7
+  },
+  "lastUpdatedAt": "2026-03-19T09:15:00Z",
+  "provenance": [
+    "patient_report",
+    "physical_exam",
+    "clinician_assessment"
+  ]
+}
