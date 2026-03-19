@@ -2,6 +2,12 @@
 
 Representing clinical reasoning as structured patient state for AI systems.
 
+A public reference model for moving from note-centric workflows to explicit, decision-ready patient state.
+
+## In One Sentence
+
+This project explores how rehabilitation reasoning can be represented as structured state that is updateable over time, traceable to source inputs, and usable by software agents.
+
 ## Why This Exists
 
 Most clinical workflows still collapse reasoning into free-text notes.
@@ -12,6 +18,13 @@ This repository explores a different approach:
 > clinical reasoning is not only a note, it is a state
 
 The goal is to model patient state as an explicit, updateable, decision-ready structure.
+
+## Current Scope
+
+- public reference model, not production software
+- rehabilitation-oriented examples, but generalizable beyond one condition
+- lightweight types and example data to make the concept concrete
+- intentionally excludes PHI, operational workflows, auth, billing, and database internals
 
 ## What A Patient State System Does
 
@@ -62,6 +75,24 @@ flowchart TD
 - [`examples/patient-state.example.json`](./examples/patient-state.example.json): an example state snapshot
 - [`docs/model-overview.md`](./docs/model-overview.md): model notes and design rationale
 
+## Quick Glimpse
+
+```ts
+type PatientState = {
+  patientId: string;
+  axes: {
+    condition: StateAxis;
+    impairment: StateAxis;
+    function: StateAxis;
+    participation: StateAxis;
+    risk: StateAxis;
+    trajectory: StateAxis;
+  };
+  riskSignals: RiskSignal[];
+  trajectory: TrajectorySnapshot;
+};
+```
+
 ## Design Principles
 
 1. State over notes
@@ -93,8 +124,6 @@ Clinical state changes incrementally. The model should tolerate incomplete but m
 - not medical advice
 - not a complete EMR schema
 - not a replacement for clinician judgment
-
-It is a public concept and reference model extracted from broader product work. Sensitive implementation details, operational workflows, PHI, auth, billing, and database internals are intentionally excluded.
 
 ## Roadmap
 
