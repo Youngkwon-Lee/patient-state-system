@@ -71,8 +71,12 @@ flowchart TD
 
 ## Repository Contents
 
+- [`examples/intake-input.example.json`](./examples/intake-input.example.json): example source data before state assembly
 - [`src/types/patient-state.ts`](./src/types/patient-state.ts): a minimal TypeScript reference model
 - [`examples/patient-state.example.json`](./examples/patient-state.example.json): an example state snapshot
+- [`src/types/decision-context.ts`](./src/types/decision-context.ts): a minimal downstream decision context model
+- [`examples/decision-context.example.json`](./examples/decision-context.example.json): an example decision-ready output
+- [`docs/input-to-state-walkthrough.md`](./docs/input-to-state-walkthrough.md): a step-by-step explanation of how inputs become state
 - [`docs/model-overview.md`](./docs/model-overview.md): model notes and design rationale
 
 ## Quick Glimpse
@@ -92,6 +96,14 @@ type PatientState = {
   trajectory: TrajectorySnapshot;
 };
 ```
+
+## Follow The Flow
+
+1. Start with raw inputs such as patient report, physical exam, questionnaires, and clinician interpretation.
+2. Normalize those inputs into explicit state axes.
+3. Use the state to assemble a decision context for reassessment, planning, handoff, or agent support.
+
+The full walkthrough is in [`docs/input-to-state-walkthrough.md`](./docs/input-to-state-walkthrough.md).
 
 ## Design Principles
 

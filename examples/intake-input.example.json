@@ -1,0 +1,42 @@
+{
+  "patientId": "demo-patient-001",
+  "encounterId": "encounter-2026-03-19-01",
+  "collectedAt": "2026-03-19T09:00:00Z",
+  "careContext": {
+    "setting": "outpatient",
+    "reasonForVisit": "low back pain with lifting intolerance"
+  },
+  "patientReport": {
+    "primaryComplaint": "Low back pain for about two weeks, worse with bending and lifting.",
+    "painScoreNrs": 4,
+    "reportedActivityLimits": [
+      "Difficulty lifting boxes from floor level",
+      "Avoids repeated bending at work"
+    ],
+    "participationImpact": [
+      "Working on modified duties in warehouse role"
+    ],
+    "changeSinceLastWeek": "Feels somewhat better, but still avoids heavier tasks."
+  },
+  "questionnaires": [
+    {
+      "name": "fear_avoidance_screen",
+      "finding": "elevated concern with bending and lifting",
+      "signalLevel": "moderate"
+    }
+  ],
+  "physicalExam": {
+    "movementProvocation": [
+      "Pain with trunk flexion"
+    ],
+    "strengthOrEnduranceFindings": [
+      "Reduced trunk endurance"
+    ],
+    "redFlagScreen": "no immediate red flag pattern identified"
+  },
+  "clinicianAssessment": {
+    "workingFrame": "Mechanical low back pain presentation",
+    "currentConcern": "Fear-related underloading may delay return to normal lifting.",
+    "responseSoFar": "Early improvement is present but function remains limited."
+  }
+}

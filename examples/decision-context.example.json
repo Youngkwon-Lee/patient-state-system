@@ -1,0 +1,40 @@
+{
+  "patientId": "demo-patient-001",
+  "generatedFromStateAt": "2026-03-19T09:16:00Z",
+  "primaryFrame": "Low back pain presentation with improving symptoms but persistent lifting-related functional limitation.",
+  "stateSummary": {
+    "condition": "Mechanical low back pain presentation without current red flag pattern",
+    "keyImpairment": "Pain with flexion and reduced trunk endurance",
+    "keyFunctionalLimit": "Difficulty lifting objects over 10 kg from floor level",
+    "keyParticipationLimit": "Modified work duties remain necessary",
+    "keyRisk": "Fear avoidance may delay recovery",
+    "trajectory": "Early trend is improving but not yet functionally resolved"
+  },
+  "focusAreas": [
+    "Track lifting tolerance over the next review window",
+    "Monitor fear-related avoidance behavior",
+    "Compare symptom improvement against work-task tolerance"
+  ],
+  "planningGuardrails": [
+    "Do not treat lower pain alone as full recovery if lifting tolerance remains limited",
+    "Keep risk review active while fear avoidance is still present",
+    "Reassess function and participation together rather than in isolation"
+  ],
+  "missingOrNextQuestions": [
+    "How much load can the patient currently tolerate without symptom flare?",
+    "Has bending confidence changed since the last visit?",
+    "Are modified duties still required across the full work shift?"
+  ],
+  "reviewTargets": [
+    "lifting tolerance",
+    "fear avoidance behavior",
+    "work participation",
+    "symptom trend"
+  ],
+  "sourcePriority": [
+    "patient_report",
+    "physical_exam",
+    "clinician_assessment"
+  ],
+  "notes": "This example shows a decision-ready interpretation layer derived from structured patient state. It is not a diagnosis or treatment recommendation."
+}
